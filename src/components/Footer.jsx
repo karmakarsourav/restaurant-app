@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -15,24 +16,24 @@ const Footer = () => {
           <h2 className="text-xl font-semibold text-white mb-2">Navigation</h2>
           <ul className="space-y-2">
             <li>
-              <a href="#home" className="hover:text-white">
+              <Link to="/" className="hover:text-white">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#home" className="hover:text-white">
+              <Link to="/menu" className="hover:text-white">
                 Menu
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#home" className="hover:text-white">
+              <Link to="/about" className="hover:text-white">
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#home" className="hover:text-white">
+              <Link to="/contact" className="hover:text-white">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -50,9 +51,15 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold text-white mb-2">Follow Us</h3>
           <div className="flex space-x-4">
-            <a href="" className="hover:text-white">Facebook</a>
-            <a href="" className="hover:text-white">Instagram</a>
-            <a href="" className="hover:text-white">Twitter</a>
+            <a href="" className="hover:text-white">
+              Facebook
+            </a>
+            <a href="" className="hover:text-white">
+              Instagram
+            </a>
+            <a href="" className="hover:text-white">
+              Twitter
+            </a>
           </div>
         </div>
       </div>

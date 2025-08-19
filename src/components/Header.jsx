@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import Login from "./modal/Login";
 import Register from "./modal/Register";
 
@@ -6,16 +7,28 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [loginModal, setLoginModal] = useState(false);
   const [registerModal, setRegisterModal] = useState(false);
+  const activeLinkCSS = ({ isActive }) =>
+    isActive
+      ? "text-blue-700 underline decoration-blue-600 underline-offset-4 decoration-2"
+      : "hover:text-blue-700 hover:underline hover:decoration-blue-600 hover:underline-offset-4 hover:decoration-2";
 
   return (
     <header className="bg-white shadow-md">
       <div className="max-w-7xl mx-auto p-4 flex justify-between items-center text-gray-700 text-xl font-semibold">
         <div className="text-sm md:text-xl">Restaurant App</div>
         <nav className="hidden md:flex gap-4">
-          <a href="">Home</a>
-          <a href="">Menu</a>
-          <a href="">About</a>
-          <a href="">Contact</a>
+          <NavLink to="/" className={activeLinkCSS}>
+            Home
+          </NavLink>
+          <NavLink to="/menu" className={activeLinkCSS}>
+            Menu
+          </NavLink>
+          <NavLink to="/about" className={activeLinkCSS}>
+            About
+          </NavLink>
+          <NavLink to="/contact" className={activeLinkCSS}>
+            Contact
+          </NavLink>
         </nav>
 
         <div className="hidden md:flex gap-4">
@@ -60,10 +73,22 @@ const Header = () => {
 
       {isMobileMenuOpen && (
         <div className="flex flex-col md:hidden gap-2 text-gray-700 px-4 pb-4">
-          <a href="">Home</a>
-          <a href="">Menu</a>
-          <a href="">About</a>
-          <a href="">Contact</a>
+          <NavLink
+            to="/"
+            className={activeLinkCSS}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Home
+          </NavLink>
+          <NavLink to="/menu" className={activeLinkCSS} onClick={() => setIsMobileMenuOpen(false)}>
+            Menu
+          </NavLink>
+          <NavLink to="/about" className={activeLinkCSS} onClick={() => setIsMobileMenuOpen(false)}>
+            About
+          </NavLink>
+          <NavLink to="/contact" className={activeLinkCSS} onClick={() => setIsMobileMenuOpen(false)}>
+            Contact
+          </NavLink>
           <button
             className="cursor-pointer text-left hover:text-gray-900"
             onClick={() => setLoginModal(true)}

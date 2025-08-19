@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <section
       className="relative bg-cover bg-center h-[90vh] text-white flex items-center justify-center"
-      style={{ backgroundImage: "url(/images/Hero.png)" }}
+      style={{ backgroundImage: "url(/images/Hero.jpg)" }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60 z-0"></div>

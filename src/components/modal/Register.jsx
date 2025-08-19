@@ -20,7 +20,7 @@ const Register = ({ onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
       <div className="relative bg-white rounded-lg w-full max-w-md shadow-lg p-6">
         <button
           className="absolute top-3 right-3 text-3xl font-semibold text-gray-500 hover:text-gray-700 cursor-pointer"
